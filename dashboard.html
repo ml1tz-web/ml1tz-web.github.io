@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboardstyle.css" />
+    <link rel="icon" type="image/x-icon" href="hz-logo.ico">
+    <style>
+        .ptext {
+            margin-top: 10px;
+        }
+
+        progress {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- TOP NAVIGATION BAR -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Useful info</a>
+                    <div class="dropdown-content">
+                        <a
+                            href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/CER-HZ-Bachelor-full-time-2023-2024-DEF-version-20240412.pdf">Course
+                            and Examination Regulations</a>
+                        <a
+                            href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/TWE/IR-B-HBO-ICT-full-time-2023-2024-DEF.pdf">The
+                            Implementation Regulations</a>
+                        <a href="https://learn.hz.nl/my/">Learn environment</a>
+                        <a href="https://learn.hz.nl/grade/report/overview/index.php">Study progress</a>
+                        <a href="https://github.com/HZ-HBO-ICT">HZ Github</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main content here -->
+        <table>
+            <tr>
+                <th>Quarter</th>
+                <th>Course</th>
+                <th>Exams</th>
+                <th>Grades</th>
+                <th>EC's</th>
+            </tr>
+            <tr>
+                <th rowspan="3">1</th>
+                <td>PCO</td>
+                <td>Assessment website</td>
+                <td><input type="number" class="grade" data-ecs="2.5" min="0" max="10" step="0.1"></td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>CSB</td>
+                <td>Written Exam</td>
+                <td><input type="number" class="grade" data-ecs="5" min="0" max="10" step="0.1"></td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>PBA</td>
+                <td>Case Study Exam</td>
+                <td><input type="number" class="grade" data-ecs="5" min="0" max="10" step="0.1"></td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2</th>
+                <td>PPD-E</td>
+                <td>PPD-E Exam</td>
+                <td><input type="number" class="grade" data-ecs="12.5" min="0" max="10" step="0.1"></td>
+                <td>12.5</td>
+            </tr>
+            <tr>
+                <td>OOP</td>
+                <td>OOP Exam</td>
+                <td><input type="number" class="grade" data-ecs="10" min="0" max="10" step="0.1"></td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3</th>
+                <td>Framework-project 1</td>
+                <td>Presentation (with group)</td>
+                <td><input type="number" class="grade" data-ecs="10" min="0" max="10" step="0.1"></td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Business IT consultancy basics</td>
+                <td>Presentation (with group)</td>
+                <td><input type="number" class="grade" data-ecs="2.5" min="0" max="10" step="0.1"></td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4</th>
+                <td>Framework-project 2</td>
+                <td>Portfolio</td>
+                <td><input type="number" class="grade" data-ecs="10" min="0" max="10" step="0.1"></td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Business IT consultancy basics</td>
+                <td>Portfolio</td>
+                <td><input type="number" class="grade" data-ecs="2.5" min="0" max="10" step="0.1"></td>
+                <td>2.5</td>
+            </tr>
+        </table>
+
+        <h1>EC'S</h1>
+        <label for="file">Total EC'S collected:</label>
+        <div class="ptext" id="ecText">0/60 EC's</div>
+        <progress id="ecProgress" value="0" max="60"></progress>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <h3>Contact</h3>
+            <p>Address: Vlissingen, Netherlands</p>
+            <h4>© 2024 Dima Kolesov. All Rights Reserved</h4>
+        </div>
+    </footer>
+
+    <script>
+        const gradeInputs = document.querySelectorAll('.grade');
+        const progressBar = document.getElementById('ecProgress');
+        const ecText = document.getElementById('ecText');
+
+        gradeInputs.forEach(input => {
+            input.addEventListener('input', () => {
+                if (parseFloat(input.value) > 10) {
+                    input.value = 10;
+                }
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            let totalECs = 0;
+            gradeInputs.forEach(input => {
+                const grade = parseFloat(input.value);
+                const ecs = parseFloat(input.dataset.ecs);
+                if (grade >= 5.5) {
+                    totalECs += ecs;
+                }
+            });
+            progressBar.value = totalECs;
+            ecText.textContent = `${totalECs}/60 EC's`;
+        }
+    </script>
+
+</body>
+
+</html>

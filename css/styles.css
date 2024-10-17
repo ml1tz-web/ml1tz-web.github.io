@@ -1,0 +1,213 @@
+/*GENERAL*/
+body {
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    background-color: #FFF5EE;
+    margin: 0;
+    padding: 0;
+    color: #2C2C2C;
+}
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF5EE;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+.content p,
+h3 {
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+li {
+    margin-left: 20px;
+    align-items: center;
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+}
+/*GENERAL END*/
+
+
+
+/* TOP NAVIGATION BAR */
+.top-nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav ul li {
+    position: relative;
+}
+
+.top-nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-nav ul li a:hover {
+    background-color: #575757;
+}
+/* TOP NAVIGATION BAR END*/
+
+
+
+/* DROPDOWN MENU */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width:130px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*DROPDOWN MENU END*/
+
+/*MOUNTAIN PHOTO*/
+.welcome-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url(../images/mountains.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 890px;
+    margin-left: 0;
+    margin-right:0
+}       
+.welcome-hero:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background: rgba(88, 94, 66, 0.552);
+    width: 100%;
+    height: 100%;
+}
+/*MOUNTAIN PHOTO END*/
+
+
+
+/*HEADER-TEXT*/
+.header-text h2 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5;
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+.header-text h2 span {
+    color: #d92cf9;
+    text-align: center;
+}
+
+.header-text p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 30px 0 60px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+/*HEADER-TEXT END*/
+
+
+
+ /*FOOTER*/
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+ /*FOOTER END*/
+
+
+
+
+
+
+

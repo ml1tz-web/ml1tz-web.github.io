@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/FAQstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="hz-logo.ico">
+</head>
+
+<body>
+
+
+    
+    <header>
+    <!--TOP NAVIGATON BAR-->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Useful info
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a
+                        href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/CER-HZ-Bachelor-full-time-2023-2024-DEF-version-20240412.pdf">Course
+                        and Examination Regulations</a>
+                    <a
+                        href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2023-2024/Juli/TWE/IR-B-HBO-ICT-full-time-2023-2024-DEF.pdf">The
+                        Implementation Regulations</a>
+                    <a href="https://learn.hz.nl/my/">Learn environment</a>
+                    <a href="https://learn.hz.nl/grade/report/overview/index.php">Study progress</a>
+                    <a href="https://github.com/HZ-HBO-ICT">HZ Github</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="container">
+        <h1>Frequently Asked Questions</h1>
+    
+        <div class="faq-item">
+            <div class="faq-question">How can you print a document from your laptop at HZ?</div>
+            <div class="faq-answer">
+                To print a document, connect to the HZ network and use the "Print" option in your document software. Select
+                the HZ printer and send your document.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">How can you scan a document and send it to your laptop at HZ?</div>
+            <div class="faq-answer">
+                Use the scanner available in the library. Select "Scan to Email" and enter your email address to receive the
+                scanned document.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">How can I buy something on the HZ web shop?</div>
+            <div class="faq-answer">
+                Visit the HZ web shop, log in with your student account, select the items you want, and proceed to checkout.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">How can you book a project space?</div>
+            <div class="faq-answer">
+                Use the HZ booking system online to reserve a project space. Log in with your student credentials and select
+                an available slot.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">What are the instructions if you want to park your car at the HZ parking lot?</div>
+            <div class="faq-answer">
+                Make sure you have a valid parking permit. Enter the parking lot with your permit displayed and follow the
+                signs to park in designated areas.
+            </div>
+        </div>
+    </main>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    </body>
+        <footer>
+            <div class="footer">
+                <h3>Contact</h3>
+                <p>Address: Vlissingen, Netherlands</p>
+                <h4>© 2024 Dima Kolesov. All Rights Reserved</h4>
+            </div>
+        </footer>
+    </html>
